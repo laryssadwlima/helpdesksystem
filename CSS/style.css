@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body {
+
+  background-color: #f4f6f9;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo do layout base */
+.sidebar {
+  position: fixed;  
+  left: 20px;       
+  top: 78px;        
+  bottom: 0;  /* Ajustado para ocupar toda a altura */
+  width: 280px;     
+  padding: 20px;    
+  background-color: #FFFFFF; 
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(46, 98, 144, 0.1); 
+  z-index: 900;    
+  overflow-y: auto;  
+}
+
+.container.mt-5 {
+  margin-left: 292px; /* Espaçamento para evitar sobreposição da sidebar */
+  padding: 20px;
+  padding-top: 8px;
+}
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+/* Navegação no tema claro */
+.sidebar .nav-item .nav-link {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  color: #333333; /* Cor do texto mais escura */
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0; /* Cor de hover mais clara */
+  border-radius: 5px;
+  color: #000000;
+}
+.sidebar .btn-large {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: #333333; /* Cor do texto mais escura */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: #f0f0f0; /* Cor de hover mais clara */
+  color: #000000;
+  border-radius: 5px;
+}
+/* Header e Profile */
+.profile-section {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  margin-left: 300px; /* Espaço para a barra lateral */
+  padding: 20px;
+  padding-top: 70px; /* Aumente esse valor para ser maior que a altura da barra do perfil */
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #1C4E80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-link:hover {
+  background-color: #000000; 
+  border-radius: 5px;
+}
+/* Botões */
+.abrir-chamado-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: #1AB4BC;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.voltar-chamado-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: #202121;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.sair-btn {
+  display: block;
+  width: 50%;
+  text-align: center;
+  background-color: #E31B0F;
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 25px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Status Icons */
+.status-icon {
+  background-color: #F2F2F5;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.status-icon .icon {
+  width: 38px;    /* Tamanho dos ícones */
+  height: 38px;
+  margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+}
+
+.status-icon h4 {
+  font-size: 1.5rem; 
+  color: #FFFFFF;       
+  margin-bottom: 10px; 
+}
+
+.status-icon h1 {
+  font-size: 2.5rem; 
+  color: #FFFFFF;    
+  margin: 0;         /* Remove a margem padrão */
+}
+
+
+.status-icon.open { background-color: #1ABC9C; }
+.status-icon.in-progress { background-color: #F39C12; }
+.status-icon.closed { background-color: #E74C3C; }
+.status-icon.total { background-color: #3498DB; }
+.status-icon.atraso { background-color: #e4491a; }
+.status-icon.resposta { background-color: #e6d116; }
+
+/* Toggle Theme Button */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #163659;
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  position: relative;
+  height: 25px;
+  width: 50px;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon { color: #f1c40f; }
+.fa-sun { color: #f39c12; }
+
+.divider {
+  border-left: 2px solid #ccc; /* Linha vertical */
+  height: 25px; /* Altura igual ao botão de tema */
+  margin-right: 15px; /* Espaço entre a linha e o botão de tema */
+}
+
+.profile-info {
+  margin-right: 20px; /* Distância entre o nome do usuário e o botão de tema */
+}
+
+.foto {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.foto img {
+  max-width: 250px;
+  border-radius: 50%;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark .sidebar {
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .profile-section  {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: 1px solid #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .table {
+  color: #ffffff;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .form-control {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #444;
+}
+
+body.dark .form-control:focus {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+
+
+body.dark .abrir-chamado-btn:hover {
+  background-color: #148f96;
+}
+
+body.dark .voltar-chamado-btn:hover {
+  background-color: #383939;
+}
+
+body.dark .sair-btn:hover {
+  background-color: #b3150c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logout-button {
+    margin-top: 10px;
+  }
+
+  .sidebar .nav-item .nav-link {
+    font-size: 1rem;
+  }
+}
+.toggle-sidebar {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: auto; 
+  padding-left: 10px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  color: #333; /* Cor escura para os ícones */
+  margin-top: -2px;
+  
+  
+} 
+.theme-toggle {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 5px;
+  margin-left: 10px; /* Espaçamento entre o ícone e o botão de tema, ajuste conforme necessário */
+}
+
+.notification-icon, .settings-icon {
+  margin-right: 15px; /* Reduzido para um espaço mais compacto */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.profile-section {
+  display: flex;
+  position: fixed; /* Mantém o cabeçalho fixo no topo */
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 5px;/* Ajuste de padding para um tamanho mais agradável */
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Certifique-se de que o cabeçalho esteja acima do conteúdo */
+  align-items: center;
+  justify-content: space-between; 
+}
+
+
+.profile-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #1C4E80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  overflow: hidden; /* Para garantir que a imagem fique dentro do círculo */
+  margin-top: -5px;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.profile-info a {
+  margin-left: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.logout-button {
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.logo {
+  width: 270px;        /* Largura da logo */
+  height: auto;       /* Altura proporcional à largura */
+  margin-left: 15px;  /* Espaçamento à esquerda do ícone de menu */
+  display: inline-block;
+  vertical-align: middle; /* Alinha a logo com o ícone */
+}
+
+/* Charts */
+#roleChart,
+#inventoryChart {
+  height: 350px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.grafico {
+  margin-left: 0px;
+  padding: 30px;
+}
+
+/* Modal Styles */
+.modal .modal-content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modal .modal-title {
+  font-size: 1.5rem;
+}
+
+.modal .btn {
+  margin: 10px 0;
+}
+
+/* Dark Theme Modal */
+body.dark .modal-content {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark .modal-header {
+  border-bottom-color: #444;
+}
+
+body.dark .modal-footer {
+  border-top-color: #444;
+}
+/* Tema escuro para sidebar */
+body.dark .sidebar {
+  background-color: #2d2d2d;
+}
+
+body.dark .sidebar .nav-item .nav-link,
+body.dark .sidebar ul li a {
+  color: #ffffff;
+}
+
+body.dark .sidebar .nav-item .nav-link:hover,
+body.dark .sidebar ul li a:hover {
+  background-color: #3a5ab0;
+  color: #ffffff;
+}
+
+body.dark .profile-info a {
+  color: #ffffff;
+}
+/* Estilo padrão (tema claro) */
+.filter-section {
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px;
+}
+
+.filter-section h5 {
+  color: #333;
+  margin: 0;
+}
+
+.filter-section .icon {
+  color: #1582d5;
+}
+
+/* Estilo para tema escuro */
+body.dark .filter-section {
+  background-color: #424242;
+}
+
+body.dark .filter-section h5 {
+  color: #ffffff;
+}
+
+body.dark .filter-section .icon {
+  color: #3498db; /* Azul mais claro para melhor contraste no tema escuro */
+}
+
+body.dark .filter-section .arrow {
+  color: #ffffff;
+}
+/* Estilos padrão da tabela (tema claro) */
+.table {
+  color: #333;
+}
+
+.table-striped tbody tr {
+  background-color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos da tabela no tema escuro */
+body.dark .table {
+  color: #ffffff !important; /* Força a cor branca */
+}
+
+body.dark .table thead th {
+  color: #ffffff;
+  border-color: #444;
+}
+
+body.dark .table tbody td {
+  color: #ffffff;
+  border-color: #444;
+}
+
+body.dark .table-striped tbody tr {
+  background-color: #2d2d2d;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #363636;
+}
+
+body.dark .table-striped tbody tr:hover {
+  background-color: #404040;
+  cursor: pointer;
+}
+
+/* Ajustes para status e prioridade no tema escuro */
+body.dark .status-aberto,
+body.dark .status-concluido,
+body.dark .status-em_atendimento,
+body.dark .status-atrasado {
+  color: inherit !important;
+}
+
+body.dark .table-striped .status-aberto {
+  color: #66b3ff !important; /* Azul mais claro */
+}
+
+body.dark .table-striped .status-concluido {
+  color: #b3b3b3 !important; /* Cinza mais claro */
+}
+
+body.dark .table-striped .status-em_atendimento {
+  color: #ffb366 !important; /* Laranja mais claro */
+}
+
+body.dark .table-striped .status-atrasado {
+  color: #ff6666 !important; /* Vermelho mais claro */
+}
+
+/* Ajustes para o SLA no tema escuro */
+body.dark .sla-status {
+  color: #ffffff;
+}
+
+/* Ajustes para a prioridade no tema escuro */
+body.dark .prioridade {
+  color: #ffffff;
+}
+
+/* Estilos do Chat - Tema Claro */
+.message {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.message strong {
+  color: #195af0;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.message p {
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.message small {
+  color: #6c757d;
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85em;
+}
+
+/* Estilos do Chat - Tema Escuro */
+body.dark .message {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+body.dark .message strong {
+  color: #3498db; /* Azul mais claro para melhor contraste */
+}
+
+body.dark .message p {
+  color: #ffffff;
+}
+
+body.dark .message small {
+  color: #adb5bd;
+}
+
+body.dark .fa-comments {
+  color: #3498db !important; /* Sobrescreve o estilo inline */
+}
+
+body.dark h4,
+body.dark h5 {
+  color: #ffffff;
+}
+
+/* Estilo do formulário de mensagem no tema escuro */
+body.dark .form-control {
+  background-color: #333;
+  border-color: #444;
+  color: #ffffff;
+}
+
+body.dark .form-control:focus {
+  background-color: #404040;
+  border-color: #666;
+  color: #ffffff;
+}
+
+body.dark .form-group label {
+  color: #ffffff;
+}
