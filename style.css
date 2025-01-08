@@ -1,0 +1,507 @@
+usernamebody {
+  background-color: #f4f6f9;
+}
+
+/* Estilo do layout novo */
+.sidebar {
+  position: fixed;  
+  left: 20px;       
+  top: 78px;        
+  bottom: 0;  /* Ajustado para ocupar toda a altura */
+  width: 280px;     
+  padding: 20px;    
+  background-color: #FFFFFF; 
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(5, 36, 63, 0.1); 
+  z-index: 900;    
+  overflow-y: auto;  
+}
+/* Estilização para o container principal */
+.container.mt-5 {
+  margin-left: 292px; /* Espaçamento para evitar sobreposição da sidebar */
+  padding: 20px;
+  padding-top: 8px;
+}
+
+
+/* Para os botões de ação */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.sidebar .nav-item .nav-link {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  color: #000000; 
+}
+
+.sidebar .btn-large {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-link:hover {
+  background-color: #000000; 
+  border-radius: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: #acc0d0;
+}
+
+.toggle-sidebar {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: auto; 
+  padding-left: 10px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  color: #333; /* Cor escura para os ícones */
+  margin-top: -2px;
+  
+  
+} 
+.theme-toggle {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 5px;
+  margin-left: 10px; /* Espaçamento entre o ícone e o botão de tema, ajuste conforme necessário */
+}
+
+.notification-icon, .settings-icon {
+  margin-right: 15px; /* Reduzido para um espaço mais compacto */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.profile-section {
+  display: flex;
+  position: fixed; /* Mantém o cabeçalho fixo no topo */
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 5px;/* Ajuste de padding para um tamanho mais agradável */
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Certifique-se de que o cabeçalho esteja acima do conteúdo */
+  align-items: center;
+  justify-content: space-between; 
+}
+
+
+.profile-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #1C4E80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  overflow: hidden; /* Para garantir que a imagem fique dentro do círculo */
+  margin-top: -5px;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.profile-info a {
+  margin-left: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.logout-button {
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.logo {
+   width: 270px;        /* Largura da logo */
+   height: auto;       /* Altura proporcional à largura */
+   margin-left: 15px;  /* Espaçamento à esquerda do ícone de menu */
+   display: inline-block;
+   vertical-align: middle; /* Alinha a logo com o ícone */
+}
+
+.content {
+  margin-left: 300px; /* Espaço para a barra lateral */
+  padding: 20px;
+  padding-top: 70px; /* Aumente esse valor para ser maior que a altura da barra do perfil */
+}
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.status-icon {
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.abrir-chamado-btn {
+  display: block;           /* O botão ocupa toda a largura disponível */
+  width: 100%;              /* Ocupa toda a largura da barra lateral */
+  padding: 15px;            /* Tamanho do botão */
+  text-align: center;       /* Centraliza o texto */
+  background-color: #1AB4BC; /* Cor de fundo do botão */
+  color: white;             /* Cor do texto */
+  font-size: 1.2rem;        /* Tamanho da fonte */
+  border: none;             /* Remove borda padrão */
+  border-radius: 25px;      /* Curva nas bordas */
+  margin-top: 20px;         /* Espaçamento superior */
+  transition: background-color 0.3s ease; /* Suaviza a transição da cor de fundo */
+}
+
+.voltar-chamado-btn {
+  display: block;           /* O botão ocupa toda a largura disponível */
+  width: 100%;              /* Ocupa toda a largura da barra lateral */
+  padding: 15px;            /* Tamanho do botão */
+  text-align: center;       /* Centraliza o texto */
+  background-color: #202121; /* Cor de fundo do botão */
+  color: white;             /* Cor do texto */
+  font-size: 1.2rem;        /* Tamanho da fonte */
+  border: none;             /* Remove borda padrão */
+  border-radius: 25px;      /* Curva nas bordas */
+  margin-top: 20px;         /* Espaçamento superior */
+  transition: background-color 0.3s ease; /* Suaviza a transição da cor de fundo */
+}
+
+.sair-btn {
+  display: block;           /* O botão ocupa toda a largura disponível */
+  width: 50%;              /* Ocupa toda a largura da barra lateral */
+  text-align: center;       /* Centraliza o texto */
+  background-color: #E31B0F; /* Cor de fundo do botão */
+  color: white;             /* Cor do texto */
+  font-size: 1.8rem;        /* Tamanho da fonte */
+  border: none;             /* Remove borda padrão */
+  border-radius: 25px;      /* Curva nas bordas */
+  margin-top: 10px;         /* Espaçamento superior */
+  transition: background-color 0.3s ease; /* Suaviza a transição da cor de fundo */
+}
+
+.abrir-chamado-btn:hover {
+  background-color: #163d66; /* Cor mais escura ao passar o mouse */
+  text-decoration: none;     /* Remove o sublinhado ao passar o mouse */
+}
+
+.status-icon.open { background-color: #1ABC9C; }
+.status-icon.in-progress { background-color: #F39C12; }
+.status-icon.closed { background-color: #E74C3C; }
+.status-icon.total { background-color: #3498DB; }
+.status-icon.atraso { background-color: #e4491a; }
+.status-icon.resposta { background-color: #e6d116; }
+
+.status-icon {
+   background-color: #F2F2F5; /* Cor de fundo suave */
+   padding: 25px;
+   border-radius: 15px;  /* Curva nas bordas */
+   text-align: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+   margin-bottom: 20px;  /* Espaçamento entre os cards */
+}
+
+.status-icon .icon {
+  width: 38px;    /* Tamanho dos ícones */
+  height: 38px;
+  margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+}
+
+.status-icon h4 {
+  font-size: 1.5rem; 
+  color: #FFFFFF;       
+  margin-bottom: 10px; 
+}
+
+.status-icon h1 {
+  font-size: 2.5rem; 
+  color: #FFFFFF;    
+  margin: 0;         /* Remove a margem padrão */
+}
+
+
+.divider {
+  border-left: 2px solid #ccc; /* Linha vertical */
+  height: 25px; /* Altura igual ao botão de tema */
+  margin-right: 15px; /* Espaço entre a linha e o botão de tema */
+}
+
+.profile-info {
+  margin-right: 20px; /* Distância entre o nome do usuário e o botão de tema */
+}
+
+.foto {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.foto img {
+  max-width: 250px;
+  border-radius: 50%;
+}
+
+/* CSS para o gráfico */
+#roleChart {
+  height: 350px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: static; /* Sidebar é empilhada no topo */
+    height: auto; /* Altura auto para o sidebar */
+  }
+
+  .content {
+    margin-left: 0; /* Margem zerada para o conteúdo */
+    padding: 20px; /* Padding reduzido para dispositivos móveis */
+  }
+
+  .profile-section {
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: flex-start; /* Alinha itens à esquerda */
+  }
+
+  .logout-button {
+    margin-top: 10px; /* Espaçamento maior acima do botão de logout */
+  }
+  .sidebar .nav-item .nav-link {
+    font-size: 1rem; /* Tamanho reduzido em dispositivos móveis */
+  }
+}
+
+/* CSS para o gráfico */
+#roleChart {
+  height: 350px; /* Altura fixa do gráfico */
+  max-width: 350px; /* Limite de largura máxima, se desejado */
+  margin: 0 auto; /* Centraliza o gráfico */
+}
+.grafico{
+  margin-left: 0px;
+  padding: 30px;
+}
+#inventoryChart {
+  height: 350px; /* Altura fixa do gráfico */
+  max-width: 350px; /* Limite de largura máxima, se desejado */
+  margin: 0 auto; /* Centraliza o gráfico */
+}
+/* CSS para modal dashboard */
+.modal .modal-content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modal .modal-title {
+  font-size: 1.5rem;
+}
+
+.modal .btn {
+  margin: 10px 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body {
+    font-family: 'Muli', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo Escuro */
+body.dark {
+    background-color: #292c35;
+    color: #ffffff;
+}
+
+.usernamebody {
+    background-color: #1c1f24;
+}
+
+.sidebar {
+    background-color: #2b2e33;
+    color: #ffffff;
+}
+
+.sidebar .nav-item .nav-link {
+    color: #ffffff;
+}
+
+.sidebar .nav-item .nav-link:hover {
+    background-color: #44484d;
+}
+
+.sidebar .btn-large {
+    background-color: #1ab4bc;
+    color: #ffffff;
+}
+
+.container.mt-5 {
+    background-color: #1c1f24;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #3a3f44;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.card .status-icon {
+    background-color: #444;
+}
+
+.profile-section {
+    background-color: #2b2e33;
+}
+
+.profile-info a {
+    color: #ffffff;
+}
+
+.logout-button {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+/* Botão de Tema */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #163659;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    position: relative;
+    height: 25px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+/* ... código existente ... */
+
+/* Estilos para modo escuro */
+body.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark .sidebar {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark .content {
+  background-color: #1a1a1a;
+}
+
+body.dark .card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark .table {
+  color: #ffffff;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .nav-link {
+  color: #ffffff;
+}
+
+body.dark .profile-section {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark .form-control {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #444;
+}
+
+body.dark .form-control:focus {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+body.dark .btn-primary {
+  background-color: #0056b3;
+}
+
+body.dark .status-icon {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
